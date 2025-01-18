@@ -1,0 +1,275 @@
+:root {
+    --light-gray: #d3d4d9;
+    --gray: #75767b;
+    --dark-gray: #393a3f;
+    --black: #232429;
+    --orange: orange;
+    --white: white;
+    --dis: none;
+}
+
+.display {
+    display: none !important;
+}
+
+.cont {
+    font-size: 40px;
+    margin: 100px;
+    text-align: center;
+    color: var(--light-gray);
+}
+
+body {
+    background-color: var(--gray);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: relative;
+    /* overflow: hidden; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body * {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Nav Bar  */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--dark-gray);
+    color: var(--light-gray);
+    padding: 8px 20px;
+    /* width: 100%; */
+}
+
+nav .burg li {
+    height: 3px;
+    width: 30px;
+    background-color: var(--light-gray);
+    margin-bottom: 6px;
+    border-radius: 4px;
+}
+
+nav ul.m {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark-gray);
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: 1000;
+    flex-direction: column;
+    font-size: 50px;
+    color: var(--light-gray);
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+
+}
+
+nav ul span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+nav ul.m li {
+    position: relative;
+}
+
+nav ul.m li::before {
+    content: '';
+    height: 10px;
+    width: 0;
+    background-color: var(--light-gray);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transition: 0.5s;
+}
+
+nav ul.m li:hover::before {
+    width: 100%;
+}
+
+nav .icon {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    border: 2px solid var(--light-gray);
+}
+
+nav .icon .one {
+
+    margin: 0 0 0 -5px;
+    display: inline-block;
+    padding: 4px 10px;
+}
+
+nav .icon .two {
+    background-color: var(--light-gray);
+    display: inline-block;
+    padding: 4px 10px;
+    color: var(--dark-gray);
+}
+
+/* nav .toogleMode {} */
+
+nav .toogleMode div {
+    font-size: 20px;
+
+}
+
+.non {
+    content: 'بتقدر تبدل وضع الوان الموقع';
+    position: absolute;
+    padding: 10px;
+    border-radius: 25%;
+    font-size: 15px;
+    background-color: var(--dark-gray);
+    color: var(--light-gray);
+    width: 145px;
+    /* top: 61px; */
+    top: -1000px;
+    right: 7px;
+    z-index: 100;
+    transition: 0.3s;
+}
+
+.non1 {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: var(--dark-gray);
+    rotate: 45deg;
+    /* top: 57px; */
+    top: -1000px;
+    right: 20px;
+    transition: 0.3s;
+}
+
+/* intro  */
+.info {
+    width: 100%;
+    background-color: var(--light-gray);
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--dark-gray);
+}
+
+.info h2 {
+    margin: 10px;
+    font-size: 25x;
+
+}
+
+.info p {
+    font-size: 20px;
+}
+
+/* Main  */
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--dark-gray);
+}
+
+.main .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--light-gray);
+    margin: 20px;
+    border: 1px solid var(--black);
+    color: var(--dark-gray);
+    border-radius: 10px;
+    /* إضافة زوايا مدورة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* إضافة ظل */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* تأثير الانتقال */
+}
+
+.main .card:hover {
+    transform: translateY(-5px);
+    /* رفع الكارد عند التمرير */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* زيادة الظل */
+}
+
+.main .card img {
+    width: 100%;
+    max-height: 300px;
+    /* تقليل الارتفاع */
+    border-top-left-radius: 10px;
+    /* إضافة زوايا مدورة للصورة */
+    border-top-right-radius: 10px;
+    /* إضافة زوايا مدورة للصورة */
+}
+
+.main .card .text {
+    padding: 15px;
+    /* زيادة الحشوة */
+    margin: 0;
+    /* إزالة الهامش */
+    text-align: center;
+}
+
+.main .card h4 {
+    font-size: 22px;
+    /* تقليل حجم الخط */
+    margin-bottom: 10px;
+    /* إضافة مسافة أسفل العنوان */
+}
+
+.main .card p {
+    font-size: 18px;
+    /* تقليل حجم الخط */
+    margin: 0;
+    /* إزالة الهامش */
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--light-gray);
+}
+
+footer p {
+    color: var(--dark-gray);
+    display: inline-block;
+}
+
+footer div {
+    color: var(--light-gray);
+    background-color: var(--dark-gray);
+    display: inline-block;
+    margin-left: 10px;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
